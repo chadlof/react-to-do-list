@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/chadlof/react-to-do-list/issues"
   },
-  "homepage": "https://github.com/chadlof/react-to-do-list#readme"
+  "homepage": "https://github.com/chadlof/react-to-do-list#readme",
+  "dependencies": {
+    "next": "^5.0.0"
+  }
 }
