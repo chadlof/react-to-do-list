@@ -1,8 +1,8 @@
 module.exports =
 
-        __NEXT_REGISTER_PAGE('/', function() {
+        __NEXT_REGISTER_PAGE('/signUp', function() {
           var comp = 
-      webpackJsonp([4],{
+      webpackJsonp([6],{
 
 /***/ "./components/Footer.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -14565,7 +14565,7 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/index.js":
+/***/ "./pages/signUp.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14574,10 +14574,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Layout__ = __webpack_require__("./components/Layout.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styled_components_Title__ = __webpack_require__("./styled-components/Title.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styled_components_Heading2__ = __webpack_require__("./styled-components/Heading2.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styled_components_BodyWrapper__ = __webpack_require__("./styled-components/BodyWrapper.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styled_components_Container__ = __webpack_require__("./styled-components/Container.js");
-var _jsxFileName = 'C:\\code\\react-to-do-list\\pages\\index.js';
+var _jsxFileName = 'C:\\code\\react-to-do-list\\pages\\signUp.js';
 
 (function () {
     var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
@@ -14589,55 +14586,24 @@ var _jsxFileName = 'C:\\code\\react-to-do-list\\pages\\index.js';
 
 
 
-
-
-
 var _default = function _default() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */],
         {
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 9
+                lineNumber: 6
             }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_4__styled_components_BodyWrapper__["a" /* default */],
+            __WEBPACK_IMPORTED_MODULE_2__styled_components_Title__["a" /* default */],
             {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 10
+                    lineNumber: 7
                 }
             },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_5__styled_components_Container__["a" /* default */],
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 11
-                    }
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2__styled_components_Title__["a" /* default */],
-                    {
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 12
-                        }
-                    },
-                    'This is the Home page'
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_3__styled_components_Heading2__["a" /* default */],
-                    {
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 13
-                        }
-                    },
-                    'Groceary List'
-                )
-            )
+            'This is the Sign Up page'
         )
     );
 };
@@ -14654,7 +14620,7 @@ var _default = function _default() {
         return;
     }
 
-    reactHotLoader.register(_default, 'default', 'C:/code/react-to-do-list/pages/index.js');
+    reactHotLoader.register(_default, 'default', 'C:/code/react-to-do-list/pages/signUp.js');
     leaveModule(module);
 })();
 
@@ -14675,7 +14641,7 @@ var _default = function _default() {
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/signUp")
   
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
@@ -14723,49 +14689,6 @@ var _default = Anchor;
 
 /***/ }),
 
-/***/ "./styled-components/BodyWrapper.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.es.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Wrapper__ = __webpack_require__("./styled-components/Wrapper.js");
-var _templateObject = _taggedTemplateLiteral(['\nbackground-color: #EBEDF2;\n\n'], ['\nbackground-color: #EBEDF2;\n\n']);
-
-(function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
-
-  enterModule && enterModule(module);
-})();
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-
-var BodyWrapper = __WEBPACK_IMPORTED_MODULE_1__Wrapper__["a" /* default */].extend(_templateObject);
-var _default = BodyWrapper;
-/* harmony default export */ __webpack_exports__["a"] = (_default);
-;
-
-(function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
-
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(BodyWrapper, 'BodyWrapper', 'C:/code/react-to-do-list/styled-components/BodyWrapper.js');
-  reactHotLoader.register(_default, 'default', 'C:/code/react-to-do-list/styled-components/BodyWrapper.js');
-  leaveModule(module);
-})();
-
-;
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
 /***/ "./styled-components/Container.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14800,47 +14723,6 @@ var _default = Container;
 
   reactHotLoader.register(Container, 'Container', 'C:/code/react-to-do-list/styled-components/Container.js');
   reactHotLoader.register(_default, 'default', 'C:/code/react-to-do-list/styled-components/Container.js');
-  leaveModule(module);
-})();
-
-;
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
-/***/ "./styled-components/Heading2.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.es.js");
-var _templateObject = _taggedTemplateLiteral(['\nfont-size: 1.25em;\ntext-aliign: center;\ncolor: #A49E8D;\n\n'], ['\nfont-size: 1.25em;\ntext-aliign: center;\ncolor: #A49E8D;\n\n']);
-
-(function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
-
-  enterModule && enterModule(module);
-})();
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-var Heading2 = __WEBPACK_IMPORTED_MODULE_0_styled_components__["a" /* default */].h2(_templateObject);
-var _default = Heading2;
-/* harmony default export */ __webpack_exports__["a"] = (_default);
-;
-
-(function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
-
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(Heading2, 'Heading2', 'C:/code/react-to-do-list/styled-components/Heading2.js');
-  reactHotLoader.register(_default, 'default', 'C:/code/react-to-do-list/styled-components/Heading2.js');
   leaveModule(module);
 })();
 
@@ -14973,16 +14855,16 @@ var _default = Wrapper;
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./pages/index.js");
+module.exports = __webpack_require__("./pages/signUp.js");
 
 
 /***/ })
 
-},[2])
+},[4])
           return { page: comp.default }
         })
       ;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=signUp.js.map

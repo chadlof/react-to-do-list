@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -350,7 +350,7 @@ var Layout = function Layout(props) {
 
 /***/ }),
 
-/***/ "./pages/index.js":
+/***/ "./pages/signUp.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -359,13 +359,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Layout__ = __webpack_require__("./components/Layout.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styled_components_Title__ = __webpack_require__("./styled-components/Title.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styled_components_Heading2__ = __webpack_require__("./styled-components/Heading2.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styled_components_BodyWrapper__ = __webpack_require__("./styled-components/BodyWrapper.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styled_components_Container__ = __webpack_require__("./styled-components/Container.js");
-var _jsxFileName = 'C:\\code\\react-to-do-list\\pages\\index.js';
-
-
-
+var _jsxFileName = 'C:\\code\\react-to-do-list\\pages\\signUp.js';
 
 
 
@@ -376,46 +370,18 @@ var _jsxFileName = 'C:\\code\\react-to-do-list\\pages\\index.js';
         {
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 9
+                lineNumber: 6
             }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_4__styled_components_BodyWrapper__["a" /* default */],
+            __WEBPACK_IMPORTED_MODULE_2__styled_components_Title__["a" /* default */],
             {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 10
+                    lineNumber: 7
                 }
             },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_5__styled_components_Container__["a" /* default */],
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 11
-                    }
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2__styled_components_Title__["a" /* default */],
-                    {
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 12
-                        }
-                    },
-                    'This is the Home page'
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_3__styled_components_Heading2__["a" /* default */],
-                    {
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 13
-                        }
-                    },
-                    'Groceary List'
-                )
-            )
+            'This is the Sign Up page'
         )
     );
 });
@@ -440,25 +406,6 @@ var Anchor = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.a(_templa
 
 /***/ }),
 
-/***/ "./styled-components/BodyWrapper.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_components__ = __webpack_require__("styled-components");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_styled_components__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Wrapper__ = __webpack_require__("./styled-components/Wrapper.js");
-var _templateObject = _taggedTemplateLiteral(['\nbackground-color: #EBEDF2;\n\n'], ['\nbackground-color: #EBEDF2;\n\n']);
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-
-var BodyWrapper = __WEBPACK_IMPORTED_MODULE_1__Wrapper__["a" /* default */].extend(_templateObject);
-/* harmony default export */ __webpack_exports__["a"] = (BodyWrapper);
-
-/***/ }),
-
 /***/ "./styled-components/Container.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -474,23 +421,6 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var Container = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.div(_templateObject);
 /* harmony default export */ __webpack_exports__["a"] = (Container);
-
-/***/ }),
-
-/***/ "./styled-components/Heading2.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_components__ = __webpack_require__("styled-components");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_styled_components__);
-var _templateObject = _taggedTemplateLiteral(['\nfont-size: 1.25em;\ntext-aliign: center;\ncolor: #A49E8D;\n\n'], ['\nfont-size: 1.25em;\ntext-aliign: center;\ncolor: #A49E8D;\n\n']);
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-var Heading2 = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.h2(_templateObject);
-/* harmony default export */ __webpack_exports__["a"] = (Heading2);
 
 /***/ }),
 
@@ -546,10 +476,10 @@ var Wrapper = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.section(
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./pages/index.js");
+module.exports = __webpack_require__("./pages/signUp.js");
 
 
 /***/ }),
@@ -576,4 +506,4 @@ module.exports = require("styled-components");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=signUp.js.map
