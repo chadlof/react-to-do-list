@@ -1,9 +1,15 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Title from '../styled-components/Title'
+import {Wrapper, BodyWrapper,Container, Title, Heading2, Paragraph, Anchor}from '../style'
+
 
 export default () => (
     <Layout>
-        <Title>This is the Sign In page</Title>
+        <BodyWrapper>
+            <Container>
+                <Title>This is the Sing In page</Title>
+                
+            </Container>
+        </BodyWrapper>
     </Layout>
 )

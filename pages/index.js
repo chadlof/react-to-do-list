@@ -1,9 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Title from '../styled-components/Title'
-import Heading2 from '../styled-components/Heading2'
-import BodyWrapper from '../styled-components/BodyWrapper'
-import Container from '../styled-components/Container'
+import {Wrapper, BodyWrapper,Container, Title, Heading2, Paragraph, Anchor}from '../style'
+
 
 export default () => (
     <Layout>

@@ -1,22 +1,19 @@
 import Link from 'next/link'
-import Wrapper from '../styled-components/Wrapper'
-import Container from '../styled-components/Container'
-import Anchor from '../styled-components/Anchor'
-import Par from '../styled-components/Par'
+import {Wrapper, BodyWrapper,Container, Title, Heading2, Paragraph, Anchor}from '../style'
 
 
 const Footer = () => (
 <Wrapper>
     <Container>
         <Container>
-            <Par>
+            <Paragraph>
                 Created by: Brent Clark & Chad Lofgren
-            </Par>
+            </Paragraph>
         </Container>
         <Container>
-            <Par>
+            <Paragraph>
                 © 2018 To Dues. All Rights Reserved.
-            </Par>
+            </Paragraph>
         </Container>
     </Container>
 </Wrapper>

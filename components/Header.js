@@ -1,7 +1,5 @@
 import Link from 'next/link'
-import Wrapper from '../styled-components/Wrapper'
-import Container from '../styled-components/Container'
-import Anchor from '../styled-components/Anchor'
+import {Wrapper, BodyWrapper,Container, Title, Heading2, Paragraph, Anchor}from '../style'
 
 
 const Header = () => (

@@ -1,17 +1,17 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import Wrapper from '../styled-components/Wrapper'
+import {MainWrapper, Wrapper, BodyWrapper,Container, Title, Heading2, Paragraph, Anchor}from '../style'
 
 
 const Layout = (props) => (
     <html>
         <body>
-            {/* <Wrapper> */}
+            <MainWrapper>
                 <Header />
                 {props.children}
                 <Footer />
-            {/* </Wrapper>  */}
+            </MainWrapper> 
          </body>
      </html>
 )
