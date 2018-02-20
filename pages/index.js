@@ -1,16 +1,36 @@
 import React from 'react'
-import Layout from '../components/Layout'
-import {Wrapper, BodyWrapper,Container, Title, Heading2, Paragraph, Anchor}from '../style'
+import styled from 'styled-components'
+import Layout from '../components/orginisms/Layout'
+import Title from '../components/atoms/Title'
 
+const Section = styled.section`
+padding: 1em;
+margin: auto;
+background-color: #EBEDF2;
+border-top: 1px solid #d8d8d8;
+
+`;
+const Div = styled.div`
+padding: 1em;
+/* margin-left: 15em; */
+display: inline-block;
+`;
+
+const H2 = styled.h2`
+font-size: 1.25em;
+text-aliign: center;
+color: #A49E8D;
+
+`;
 
 export default () => (
     <Layout>
-        <BodyWrapper>
-            <Container>
-                <Title>This is the Home page</Title>
-                <Heading2>Groceary List</Heading2>
+        <Section>
+            <Div>
+                <Title title='This is the Home page'></Title>
+                <H2>Groceary List</H2>
                 
-            </Container>
-        </BodyWrapper>
+            </Div>
+        </Section>
     </Layout>
 )
