@@ -8,8 +8,8 @@ padding: 1em;
 margin: auto;
 background-color: #EBEDF2;
 border-top: 1px solid #d8d8d8;
-
 `;
+
 const Div = styled.div`
 padding: 1em;
 /* margin-left: 15em; */
