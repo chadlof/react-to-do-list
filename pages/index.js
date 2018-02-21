@@ -18,7 +18,7 @@ display: inline-block;
 
 const H2 = styled.h2`
 font-size: 1.25em;
-text-aliign: center;
+text-align: center;
 color: #A49E8D;
 
 `;
@@ -29,7 +29,6 @@ export default () => (
             <Div>
                 <Title title='This is the Home page'></Title>
                 <H2>Groceary List</H2>
-                
             </Div>
         </Section>
     </Layout>
