@@ -28,11 +28,14 @@ export default class List extends Component {
 
     }
      updateListArray(newItem) {
-        const newListArray = this.state.listArray.slice(0);
+         if (newItem != "") {
+            const newListArray = this.state.listArray.slice(0);
         newListArray.push(newItem);
         this.setState({
             listArray: newListArray
         })
+         }
+        
 
 
     }
