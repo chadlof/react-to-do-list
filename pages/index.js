@@ -12,7 +12,7 @@ border-top: 1px solid #d8d8d8;
 `;
 
 const Div = styled.div`
-padding: 1em;
+padding: .5em;
 /* margin-left: 15em; */
 display: inline-block;
 margin-left: 20%;
@@ -33,9 +33,9 @@ export default () => (
     <Layout>
         <Section>
             <Div>
-                <Div>
+                {/* <Div>
                     <Title title='This is the Home page'></Title>
-                </Div>
+                </Div> */}
                 <Div>
                     <List></List>
                 </Div>

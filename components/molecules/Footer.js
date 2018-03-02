@@ -18,7 +18,7 @@ display: inline-block;
 `;
 const P = styled.p`
 font-size: .75em;
-text-aliign: center;
+text-align: center;
 color: #A49E8D;
 
 `;
