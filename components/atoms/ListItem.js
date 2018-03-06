@@ -1,6 +1,9 @@
 import React from 'react'
-import styled from 'styled-components';
+import {  Component } from 'react'
+import styled from 'styled-components'
 import Link from 'next/link'
+import RemoveItem from './RemoveItem'
+import Img from 'react-image'
 
 const Div = styled.div`
 display: inline-block;
@@ -19,12 +22,21 @@ background-color: #eee;
 `
 const Label = styled.label`
 `
-const ListItem = (props) =>(
 
-    <Div>
-        <Input id="listitem" type="checkbox"/>
-        <Label for="listitem">{props.listitem}</Label>
-    </Div>
-)
+export default class ListItem extends Component {
+    constructor (props){
+        super(props);
+        this.listitem = props.listitem
+        
+    }
 
-export default ListItem
+    render() {
+       return(
+        <Div>
+            <Input id="listitem" type="checkbox"/>
+            <Label for="listitem">{this.listitem}</Label>
+        </Div>
+        )
+    }
+
+}
