@@ -34,7 +34,8 @@ export default class NewItem extends Component {
        return(
         <Div className={this.props.className}>
             <InputWrapper className={this.props.className}>
-                 <input type="text" name="newitem"  placeholder=" Add new item" ref={input => this.newItemInput = input}/>
+                 <input type="text" name="newitem"  placeholder=" Add new item" 
+                        ref={input => this.newItemInput = input}/>
             </InputWrapper>
             <Img className={this.props.className} src="../../static/images/plus-icon.png" alt="Add" height="30" style={{paddingLeft:'210px'}}
             onClick={e => {

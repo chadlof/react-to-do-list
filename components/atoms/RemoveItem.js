@@ -20,16 +20,16 @@ const ImgWrapper = styled.span`
 export default class RemoveItem extends Component {
     constructor (props){
         super(props);
-        this.removeIndex = null
+        this.index = null
     }
     render() {
        return(
         
             <ImgWrapper className={this.props.className}>
-                <img src="../../static/images/trash-icon.png" alt="Remove" height="25" style={{paddingLeft:'20px'}}
-                    ref={img => this.removeIndex = img}
-                    onClick={e => {this.props.onRemove(this.removeIndex)}}
-                />
+                <a ref={a => this.index = a}
+                    onClick={e => {this.props.onRemove(this.props.index)}}>
+                    <img src="../../static/images/trash-icon.png" alt="Remove" height="25" style={{paddingLeft:'20px'}}/>
+                </a>
             </ImgWrapper>
             
          
