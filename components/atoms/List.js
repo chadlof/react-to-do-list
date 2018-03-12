@@ -59,7 +59,7 @@ export default class List extends Component {
         console.log('newListArray: '+newListArray)
         console.log('index: '+index)//shows the correct index of the item I choose to remove
         const removedItem = newListArray.splice(index,1,);//replacing the first param to any num has no change
-        console.log('removedItem: '+removedItem)
+        console.log('removedItem: '+removedItem)//removes the correct item
         console.log('newListArray after splice: '+newListArray)//the correct item is removed from newListArray
 
         
