@@ -15,10 +15,10 @@ const Div = styled.div`
 padding: .5em;
 /* margin-left: 15em; */
 display: inline-block;
-margin-left: 20%;
-margin-right: 20%;
+margin-left: 10%;
+margin-right: 10%;
 padding: auto;
-width: 60%;
+width: 80%;
 text-align: center;
 `;
 
@@ -30,14 +30,14 @@ color: #A49E8D;
 `;
 
 export default () => (
-    <Layout>
+    <Layout >
         <Section>
             <Div>
                 {/* <Div>
                     <Title title='This is the Home page'></Title>
                 </Div> */}
                 <Div>
-                    <List></List>
+                    <List className="not-a-class"></List>
                 </Div>
                 
             </Div>

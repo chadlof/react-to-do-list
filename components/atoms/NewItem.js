@@ -32,9 +32,10 @@ export default class NewItem extends Component {
     }
     render() {
        return(
-        <Div>
+        <Div >
             <InputWrapper>
-                 <input type="text" name="newitem"  placeholder=" Add new item" ref={input => this.newItemInput = input}/>
+                 <input type="text" name="newitem"  placeholder=" Add new item" 
+                        ref={input => this.newItemInput = input}/>
             </InputWrapper>
             <Img src="../../static/images/plus-icon.png" alt="Add" height="30" style={{paddingLeft:'210px'}}
             onClick={e => {
