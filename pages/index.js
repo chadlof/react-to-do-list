@@ -37,7 +37,7 @@ export default () => (
                     <Title title='This is the Home page'></Title>
                 </Div> */}
                 <Div>
-                    <List></List>
+                    <List className="not-a-class"></List>
                 </Div>
                 
             </Div>

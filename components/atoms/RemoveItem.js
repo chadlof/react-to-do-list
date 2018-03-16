@@ -7,13 +7,8 @@ import List from './List'
 
 
 const ImgWrapper = styled.span`
-   /* visibility: hidden; */
-
-/* &:hover {
-    visibility: visible;
-    display:inline-block;
-} */
-
+    visibility: hidden;
+    float: right;
 `;
 
 
@@ -25,7 +20,7 @@ export default class RemoveItem extends Component {
     render() {
        return(
         
-            <ImgWrapper className={this.props.className}>
+            <ImgWrapper>
                 <a ref={a => this.index = a}
                     onClick={e => {this.props.onRemove(this.props.index)}}>
                     <img src="../../static/images/trash-icon.png" alt="Remove" height="25" style={{paddingLeft:'20px'}}/>

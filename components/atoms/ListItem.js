@@ -6,12 +6,13 @@ import RemoveItem from './RemoveItem'
 import Img from 'react-image'
 
 const Div = styled.div`
-display: inline-block;
+display: block;
 position: relative;
 padding-left: 35px;
 margin-bottom: 12px;
 cursor: pointer;
 font-size: 22px;
+float:left;
 `;
 const Input = styled.input`
 position: absolute;

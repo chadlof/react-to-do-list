@@ -24,9 +24,9 @@ display: block;
 position: relative;
 font-size: 22px;
 
-&:hover ${RemoveIcon} {
-    visibility: hidden;
-    
+&:hover .remove-icon {
+    visibility: visible;
+    cursor:pointer;
 }
 `;
 
@@ -56,40 +56,30 @@ export default class List extends Component {
     removeItemFromListArray(index) {
         
         const newListArray = this.state.listArray.slice(0);
-        console.log('newListArray: '+newListArray)
-        console.log('index: '+index)//shows the correct index of the item I choose to remove
-        const removedItem = newListArray.splice(index,1,);//replacing the first param to any num has no change
-        console.log('removedItem: '+removedItem)//removes the correct item
-        console.log('newListArray after splice: '+newListArray)//the correct item is removed from newListArray
+        const removedItem = newListArray.splice(index,1,);
+      
 
         
         this.setState ({
             listArray: newListArray
         })
-        console.log('listArray after setState(): '+this.state.listArray)//still holds the full array - no its was removed
-        console.log('Object.keys: '+Object.keys(this.state.listArray))//same as above
-        
-        //after deleting a couple items 
-        //- in the console newListArray is corect
-        //- after setState() ListArray has not updated 
-        //- and what is renderd on screen is completly diffrent, its keeps deleting the last item in the list
+    
     }
     
     render () {
+        console.log('set state', this.state.listArray)
         return(
-            <Div className={this.props.className}>
-                <Title className={this.props.className} 
-                        title="Things to buy"></Title>
-                <Div className={this.props.className}>
+            <Div>
+                <Title title="Things to buy" />
+                <Div>
                     {this.state.listArray.map((item, index) => (
-                        <Div2 className={this.props.className} 
-                                key={"div"+index}>
-                            <ListItem className={this.props.className} 
-                                        key={"item"+index} listitem={item}></ListItem>
-                            <RemoveItem className={this.props.className} 
-                                        key={"remove"+index}    
-                                        onRemove={this.removeItemFromListArray}
-                                        index={index}></RemoveItem>
+                        <Div2 key={"div"+item}>
+                            <ListItem listitem={item} />
+                            <RemoveItem
+                                className="remove-icon"
+                                onRemove={this.removeItemFromListArray}
+                                index={index}
+                            />
                         </Div2>
                         
                     ))}
