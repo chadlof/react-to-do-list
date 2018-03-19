@@ -12,18 +12,19 @@ const ImgWrapper = styled.span`
 `;
 
 
-export default class RemoveItem extends Component {
+export default class AddItem extends Component {
     constructor (props){
         super(props);
-        this.index = null
+        this.item = null
     }
     render() {
+        console.log('AddItem-item: ',this.props.item)
        return(
         
             <ImgWrapper>
-                <a ref={a => this.index = a}
-                    onClick={e => {this.props.onRemove(this.props.index)}}>
-                    <img src="../../static/images/trash-icon.png" alt="Remove" height="25" style={{paddingLeft:'20px'}}/>
+                <a ref={a => this.item = a}
+                    onClick={e => {this.props.onReAdd(this.props.item)}}>
+                    <img src="../../static/images/plus-icon.png" alt="Add" height="25" style={{paddingLeft:'20px'}}/>
                 </a>
             </ImgWrapper>
             
