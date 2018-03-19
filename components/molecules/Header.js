@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import Links from '../atoms/Link'
 import Logo from '../atoms/logo'
-import Link from 'next/link'
+
 
 const Div = styled.div`
 /* padding: 1em; */

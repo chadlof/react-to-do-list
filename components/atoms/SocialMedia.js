@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import Img from 'react-image'
 import Link from 'next/link'
-import Links from './Link'
+
 
 const Div = styled.div`
 padding: 1em;

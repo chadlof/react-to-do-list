@@ -1,14 +1,11 @@
 import {  Component } from 'react'
-import ReactDOM from 'react-dom'
 import React from 'react'
 import styled from 'styled-components'
-import Binder from 'react-binding'
-import Link from 'next/link'
 import Title from './Title'
 import ListItem from './ListItem'
 import NewItem from './NewItem'
 import RemoveItem from './RemoveItem'
-import ImgWrapper from './RemoveItem'
+
 
 const Div = styled.div`
 padding: 1em;
@@ -16,7 +13,6 @@ display: inline-grid;
 position: relative;
 font-size: 22px;
 `;
-const RemoveIcon = styled(ImgWrapper)``
 
 const Div2 = styled.div`
 padding: 1em;
@@ -56,8 +52,9 @@ export default class List extends Component {
     removeItemFromListArray(index) {
         
         const newListArray = this.state.listArray.slice(0);
-        const removedItem = newListArray.splice(index,1,);
-      
+        newListArray.splice(index,1,);
+        // const removedItem = newListArray.splice(index,1,);
+ 
 
         
         this.setState ({
@@ -67,7 +64,6 @@ export default class List extends Component {
     }
     
     render () {
-        console.log('set state', this.state.listArray)
         return(
             <Div>
                 <Title title="Things to buy" />
@@ -85,7 +81,7 @@ export default class List extends Component {
                     ))}
                 </Div>
                 
-                <NewItem className={this.props.className} 
+                <NewItem className="newItem"
                             onAdd={this.addItemToListArray}></NewItem>
               
             </Div>

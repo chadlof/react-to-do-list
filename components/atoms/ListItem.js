@@ -1,9 +1,7 @@
 import React from 'react'
 import {  Component } from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
-import RemoveItem from './RemoveItem'
-import Img from 'react-image'
+
 
 const Div = styled.div`
 display: block;

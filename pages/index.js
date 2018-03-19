@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/orginisms/Layout'
-import Title from '../components/atoms/Title'
+// import Title from '../components/atoms/Title'
 import List from '../components/atoms/List' 
 
 const Section = styled.section`
@@ -22,14 +22,9 @@ width: 80%;
 text-align: center;
 `;
 
-const H2 = styled.h2`
-font-size: 1.25em;
-text-align: center;
-color: #A49E8D;
 
-`;
 
-export default () => (
+const index = () => (
     <Layout >
         <Section>
             <Div>
@@ -44,3 +39,4 @@ export default () => (
         </Section>
     </Layout>
 )
+export default index
