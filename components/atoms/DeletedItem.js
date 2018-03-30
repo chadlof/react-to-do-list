@@ -1,8 +1,6 @@
 import React from 'react'
 import {  Component } from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
-
 
 const Div = styled.div`
 display: block;
@@ -12,6 +10,7 @@ margin-bottom: 12px;
 cursor: pointer;
 font-size: 22px;
 float:left;
+text-decoration: line-through;
 `;
 const Input = styled.input`
 position: absolute;
@@ -21,27 +20,23 @@ width: 25px;
 background-color: #eee;
 `
 const Label = styled.label`
+
 `
 
-export default class ListItem extends Component {
+export default class DeletedItem extends Component {
     constructor (props){
         super(props);
-        this.listitem = props.listitem
+        this.deletedItem = props.deletedItem
         
     }
 
     render() {
        return(
         <Div>
-            <Input id="listitem" type="checkbox"/>
-            <Label for="listitem">{this.listitem}</Label>
+            <Input id="deletedItem" type="checkbox"/>
+            <Label for="deletedItem">{this.deletedItem}</Label>
         </Div>
         )
     }
 
-}
-
-
-ListItem.propTypes = {
-    listitem: PropTypes.string.isRequired,
-}
+} 

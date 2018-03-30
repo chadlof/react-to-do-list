@@ -5,7 +5,7 @@ const H1= styled.h1`
 font-size: 1.5em;
 text-align: center;
 color: #FF9244;
-
+margin-bottom: 0;
 `;
 const Title = (props) =>(
     <H1>{props.title}</H1>

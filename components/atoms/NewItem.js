@@ -1,9 +1,8 @@
 import React from 'react'
 import {  Component } from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
 import Img from 'react-image'
-import List from './List'
+import PropTypes from 'prop-types'
 
 
 const Div = styled.div`
@@ -29,6 +28,8 @@ export default class NewItem extends Component {
     constructor (props){
         super(props);
         this.newItemInput = null
+      
+
     }
     render() {
        return(
@@ -38,7 +39,7 @@ export default class NewItem extends Component {
                         ref={input => this.newItemInput = input}/>
             </InputWrapper>
             <Img src="../../static/images/plus-icon.png" alt="Add" height="30" style={{paddingLeft:'210px'}}
-            onClick={e => {
+            onClick={() => {
                 this.props.onAdd(this.newItemInput.value)
        }}/>
         </Div>
@@ -48,3 +49,6 @@ export default class NewItem extends Component {
     }
 }
 
+NewItem.propTypes = {
+    onAdd: PropTypes.func.isRequired,
+}
