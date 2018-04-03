@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/orginisms/Layout'
 // import Title from '../components/atoms/Title'
-import List from '../components/atoms/List' 
+import List from '../components/orginisms/List' 
 
 const Section = styled.section`
 padding: 1em;

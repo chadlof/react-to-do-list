@@ -1,12 +1,10 @@
 import { Component } from 'react'
 import React from 'react'
 import styled from 'styled-components'
-import Title from './Title'
-import ListItem from './ListItem'
-import NewItem from './NewItem'
-import RemoveItem from './RemoveItem'
-import DeletedItem from './DeletedItem'
-import AddItem from './AddItem'
+import Title from '../../atoms/Title'
+import NewItem from '../../atoms/NewItem'
+import DeletedItems from './components/DeletedItems'
+import ListItems from './components/ListItems'
 
 
 const Div = styled.div`
@@ -16,17 +14,6 @@ position: relative;
 font-size: 22px;
 `;
 
-const Div2 = styled.div`
-padding: 1em;
-display: block;
-position: relative;
-font-size: 22px;
-
-&:hover .remove-icon {
-    visibility: visible;
-    cursor:pointer;
-}
-`;
 
 
 
@@ -81,58 +68,25 @@ export default class List extends Component {
                 deletedItemsArray: newDeletedItemsArray
             })
         }
-
- deletedItemsTitle() {
-
-        if (this.state.deletedItemsArray.length != 0) {
-            const title = null
-            return title
-        }else {
-            const title = <Title title="Deleted Items" />
-            return title
-        }
-        
-    }   
     
     render () {
         return(
             <Div>
                 <Title title="Things to buy" />
-                <Div>
-                    {this.state.listArray.map((item, index) => (
-                        <Div2 key={"div"+item+index}>
-                            <ListItem listitem={item} />
-                            <RemoveItem
-                                className="remove-icon"
-                                onRemove={this.removeItemFromListArray}
-                                index={index}
-                            />
-                        </Div2>
-                        
-                    ))}
-                </Div>
+                <ListItems
+                    listArray={this.state.listArray}
+                    removeItemFromListArray={this.removeItemFromListArray}
+                />
                 
-                <NewItem className="newItem"
-                            onAdd={this.addItemToListArray} />
-                {
-                    this.state.deletedItemsArray.length != 0
-                    ? <Title title="Deleted Items" />
-                    : null
-                }
-                <Div>
-                    {this.state.deletedItemsArray.map((item, index) => (
-                        <Div2 key={"div"+item+index}>
-                            <DeletedItem deletedItem={item} />
-                            <AddItem
-                                className="reAdd-icon"
-                                onReAdd={this.addItemToListArray}
-                                index={index}
-                                item={item}
-                            />
-                        </Div2>
-                        
-                    ))}
-                </Div>
+                
+                <NewItem
+                    className="newItem"
+                    onAdd={this.addItemToListArray}
+                />
+                <DeletedItems
+                    deletedItemsArray={this.state.deletedItemsArray}
+                    reAddItemToListArray={this.reAddItemToListArray}
+                />
                                     
                 </Div>	             
             );	         
