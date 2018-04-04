@@ -1,6 +1,7 @@
 import React from 'react'
 import { Component }  from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 
 
@@ -10,7 +11,7 @@ const ImgWrapper = styled.span`
 `;
 
 
-export default class AddItem extends Component {
+export default class ReAddItem extends Component {
     constructor (props){
         super(props);
         this.item = null
@@ -21,7 +22,7 @@ export default class AddItem extends Component {
         
             <ImgWrapper>
                 <a ref={a => this.item = a}
-                    onClick={e => {this.props.onReAdd(this.props)}}>
+                    onClick={() => {this.props.onReAdd(this.props)}}>
                     <img src="../../static/images/plus-icon.png" alt="Add" height="25" style={{paddingLeft:'20px'}}/>
                 </a>
             </ImgWrapper>
@@ -31,4 +32,8 @@ export default class AddItem extends Component {
 
 
     }
+}
+
+ReAddItem.propTypes = {
+    onReAdd: PropTypes.func.isRequired
 }

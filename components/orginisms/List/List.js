@@ -30,16 +30,19 @@ export default class List extends Component {
                     
         this.addItemToListArray = this.addItemToListArray.bind(this);
         this.removeItemFromListArray = this.removeItemFromListArray.bind(this);
-        this.reAddItemToListArray = this.reAddItemToListArray.bind(this);
-
+   
     }
-    addItemToListArray(item) {
-         if (item != "") {
+    addItemToListArray(props) {
+         if (props.item != "") {
             const newListArray = this.state.listArray.slice(0);
-            newListArray.push(item);
+            newListArray.push(props.item);
+            const newDeletedItemsArray = this.state.deletedItemsArray.slice(0);
+            newDeletedItemsArray.splice(props.index,1);
+
 
             this.setState({
-                listArray: newListArray
+                listArray: newListArray,
+                deletedItemsArray: newDeletedItemsArray
             })
          }
     }
@@ -57,17 +60,6 @@ export default class List extends Component {
         })
     }
 
-    reAddItemToListArray(props) {
-            const newListArray = this.state.listArray.slice(0);
-            newListArray.push(props.item);
-            const newDeletedItemsArray = this.state.deletedItemsArray.slice(0);
-            newDeletedItemsArray.splice(props.index,1);
-
-            this.setState({
-                listArray: newListArray,
-                deletedItemsArray: newDeletedItemsArray
-            })
-        }
     
     render () {
         return(
@@ -85,7 +77,7 @@ export default class List extends Component {
                 />
                 <DeletedItems
                     deletedItemsArray={this.state.deletedItemsArray}
-                    reAddItemToListArray={this.reAddItemToListArray}
+                    addItemToListArray={this.addItemToListArray}
                 />
                                     
                 </Div>	             

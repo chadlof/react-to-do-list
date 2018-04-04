@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DeletedItem from '../../../../atoms/DeletedItem'
-import AddItem from '../../../../atoms/AddItem'
+import ReAddItem from '../../../../atoms/ReAddItem'
 import Title from '../../../../atoms/Title'
 import styled from 'styled-components'
 
@@ -26,7 +26,7 @@ font-size: 22px;
 
 
 const DeletedItems = (props) => {
-    const { deletedItemsArray, reAddItemToListArray } = props
+    const { deletedItemsArray, addItemToListArray } = props
 
     return (
         <section>
@@ -39,9 +39,9 @@ const DeletedItems = (props) => {
             {deletedItemsArray.map((item, index) => (
                 <Div2 key={"div"+item+index}>
                     <DeletedItem deletedItem={item} />
-                    <AddItem
+                    <ReAddItem
                         className="reAdd-icon"
-                        onReAdd={reAddItemToListArray}
+                        onReAdd={addItemToListArray}
                         index={index}
                         item={item}
                     />
@@ -56,7 +56,7 @@ const DeletedItems = (props) => {
 
 DeletedItems.propTypes = {
     deletedItemsArray: PropTypes.array.isRequired,
-    reAddItemToListArray: PropTypes.func.isRequired
+    addItemToListArray: PropTypes.func.isRequired
 }
 
 export default DeletedItems
