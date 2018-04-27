@@ -5,6 +5,7 @@ import Title from '../../atoms/Title'
 import NewItem from '../../atoms/NewItem'
 import DeletedItems from './components/DeletedItems'
 import ListItems from './components/ListItems'
+import fetch from 'isomorphic-fetch'
 
 
 const Div = styled.div`
@@ -23,7 +24,7 @@ export default class List extends Component {
         super(props);
         this.state = 
                     { 
-                    listArray: ['Dog food', 'Bananas', 'Thumb Drive', 'Mouse' ],
+                    listArray:[] ,
                     deletedItemsArray:[]
                     };
 
@@ -32,6 +33,17 @@ export default class List extends Component {
         this.removeItemFromListArray = this.removeItemFromListArray.bind(this);
    
     }
+
+    componentDidMount(){
+        fetch("http://demo9307779.mockable.io/list-items")
+        .then((response) => (response.json()))
+        .then((data) => {
+            this.setState({listArray: data.items})
+        })
+
+    }
+
+
     addItemToListArray(props) {
          if (props.item != "") {
             const newListArray = this.state.listArray.slice(0);
