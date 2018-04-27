@@ -3,6 +3,22 @@ import styled from 'styled-components'
 import Layout from '../components/orginisms/Layout'
 import Title from '../components/atoms/Title'
 
+import {createStore} from "redux";
+import withRedux from "next-redux-wrapper";
+
+const reducer = (state = {foo: 'hello world'}, action) => {
+    switch (action.type) {
+        case 'FOO':
+            return {...state, foo: action.payload};
+        default:
+            return state
+    }
+};
+
+const makeStore = (initialState, options) => {
+    return createStore(reducer, initialState);
+};
+
 
 const Section = styled.section`
 padding: 1em;
@@ -24,16 +40,18 @@ text-align: center;
 
 
 
-const list = () => (
+const List = (props) => (
     <Layout >
         <Section>
             <Div>
                 <Div>
                     <Title title='This is the list page'></Title>
                 </Div>
-                
+                <div>The value in redux.foo is {props.foo}</div>
             </Div>
         </Section>
     </Layout>
 )
-export default list
+
+const connectedPage = withRedux(makeStore, (state) => ({foo: state.foo}))(List);
+export default connectedPage
